@@ -1,0 +1,485 @@
+body{
+    margin: 0;
+    font-family: 'Book Antiqua', serif;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.menu {
+    transition: all 0.3s ease-in-out;
+}
+
+.section {
+    width: 100%;  /* Prend toute la largeur */
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre verticalement si nécessaire */
+    padding: 10px 0; /* Espace en haut et en bas */
+    background: rgba(0, 0, 0, 0.03); /* Légère couleur de fond */
+}
+
+/* Style spécifique pour l'iframe */
+.section iframe {
+    width: 100%;
+    height: 50vh; /* Prend toute la hauteur de l'écran */
+    border: none;
+    display: block;
+}
+
+.couverture h1 {
+     position: relative;
+    top: -70px;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    width: fit-content; /* Adapte la largeur au texte */
+}
+
+.couverture {
+    width: 100%;
+    height:  100vh; /* Demi-hauteur de l'écran */
+    background: url('camping-car.jpg') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav {
+    background: rgba(0, 0, 0, 0.4); /* Barre semi-transparente */
+    position: relative; /* Change de absolute à relative */
+    top: -70px; /* Remonte la barre de 50px, ajuste selon ton besoin */
+    width: 100%;
+    padding: 3px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Utilisation de flexbox */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    padding: 1px 0;
+}
+
+nav ul li {
+    margin: 0 20px; /* Espacement entre les éléments */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Effet au survol */
+    border-radius: 5px;
+ 
+}  
+
+p {
+   text-align: left;  /* Aligne le texte à gauche */
+   margin-top: 5px;   /* Réduit l'espace au-dessus */
+   margin-bottom: 5px;  /* Réduit l'espace en dessous */
+   width: 80%;  /* Définit la largeur de l'élément */
+   margin-left: auto;   /* Centre horizontalement */
+   margin-right: auto;  /* Centre horizontalement */
+   
+}
+
+.texte-paragraphe {
+    display: flex;
+    justify-content: center; /* Centre le bloc contenant le paragraphe */
+}
+
+.texte-paragraphe p {
+    text-align: left; /* Alignement du texte à gauche */
+    width: 60%; /* Ajuste la largeur pour un bon rendu */
+    max-width: 800px; /* Empêche le texte d'être trop large */
+}
+.image {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    flex-wrap: wrap; /* Permet l'adaptation sur petits écrans */
+    gap: 15px; /* Espacement entre les images */
+    padding: 20px; /* Ajoute un peu d'espace autour */
+}
+
+.image img{
+    
+    width: 250px;  /* Largeur fixe */
+    height: 180px; /* Hauteur fixe */
+    object-fit: cover; /* Coupe l'image pour qu'elle remplisse bien la boîte */
+    border-radius: 10px; /* Arrondi les coins */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour un bel effet */
+}
+
+@media (max-width: 768px) {
+    .couverture {
+        min-height: 70vh; /* Plus grand pour les écrans plus petits */
+    }
+
+    .couverture h1 {
+        padding: 20px; /* Un peu plus de padding pour les mobiles */
+    }
+}
+
+.page{
+    margin-top: -8vh; /* Décalage équivalent à la hauteur de .couverture */
+    background: url('nuit-etoile.jpg') no-repeat center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.presentation{
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-align: center; /* Centre le texte */
+    width: 100%; /* Prend toute la largeur pour un centrage parfait */
+}
+
+.presentation h1 {
+    font-size: 3rem; /* Taille réduite */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-align: center; /* Centre le texte */
+    width: 100%;
+    margin: 0; /* Supprime les marges inutiles */
+    padding: 10px 0; /* Ajoute un peu d'espace autour */
+}
+
+.description p{
+   color: white;
+   font-size: 1.2rem;
+   line-height: 1.8;
+   text-align: justify;
+   font-weight: 500; /* Texte légèrement plus épais */
+   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Ombre pour améliorer la lisibilité */
+}
+
+.fond{
+   background: linear-gradient(to bottom, #6ab7e6, #fdf6d8);
+}
+
+.couleur{
+    background: linear-gradient(135deg, #D2B48C, #8B7355, #D2B48C, #8B7355);
+}
+
+.couleur2 {
+   background: linear-gradient(135deg, #1E90FF, #40E0D0);
+}
+ 
+.couleur3 {
+  background: linear-gradient(45deg, #00AEEF, #40E0D0, #A0DAB4);
+}   
+
+.couleur4 {
+   background: linear-gradient(45deg, #B0B0B0, #D4C8A8, #87CEEB);
+}   
+
+.couleur5{
+   background: linear-gradient(45deg, #E53935, #D84315, #8D6E63);
+}
+
+.couleur6 {
+   background: linear-gradient(45deg, #FF7F50, #FF6347, #FF4500);
+}
+
+.couleur7 {
+   background: linear-gradient(45deg, #8A2BE2, #7B68EE, #6A5ACD);
+}
+
+.couleur8 {
+   background: linear-gradient(45deg, #C85A17, #E7B44B, #9A4D1A);
+}
+
+.couleur9 {
+   background: linear-gradient(45deg, #B58B50, #D4A15C, #8C5A2F);
+}
+
+.couleur10 {
+   background: linear-gradient(45deg, #2C3E50, #A3C9D9, #2E5545);
+}
+
+.itineraire-container {
+    display: flex;            /* Utilise Flexbox pour aligner les éléments horizontalement */
+    flex-wrap: wrap;          /* Permet aux éléments de se répartir sur plusieurs lignes si nécessaire */
+    justify-content: center;  /* Centre les éléments horizontalement */
+    gap: 20px;                /* Espace entre les itinéraires */
+    margin-top: 20px;         /* Ajoute de l'espace en haut */
+}
+
+.itineraire {
+    display: flex;
+    flex-direction: column; /* Empile l'image et le titre */
+    align-items: center; /* Centre horizontalement */
+    text-align: center; /* Centre le texte */
+    gap: 10px; /* Espacement entre l'image et le texte */
+    margin: 20px auto; /* Centre le bloc dans la page */
+    max-width: 250px; /* Ajuste la largeur du bloc */
+}
+
+.itineraire img {
+    width: 100%; /* Rend l'image responsive */
+    max-width: 1000px; /* Taille max réduite pour laisser de la place */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+}
+
+.itineraire h1 {
+    font-size: 1.2em; /* Réduit la taille du titre */
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+.itineraire h1 a {
+    text-decoration: none;
+    color: #333; /* Couleur du texte */
+}
+
+.itineraire h1 a:hover {
+    color: #0077cc; /* Changement de couleur au survol */
+}
+
+.itineraire h2 {
+    font-size: 1.2em; /* Réduit la taille du titre */
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.itineraire h2 a {
+    text-decoration: none;
+    color: #333; /* Couleur du texte */
+}
+
+.itineraire h2 a:hover {
+    color: #0077cc; /* Changement de couleur au survol */
+}
+
+.itineraire h3 {
+    font-size: 1.2em; /* Réduit la taille du titre */
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.itineraire h3 a {
+    text-decoration: none;
+    color: #333; /* Couleur du texte */
+}
+
+.itineraire h3 a:hover {
+    color: #0077cc; /* Changement de couleur au survol */
+}
+
+.itineraire h4 {
+    font-size: 1.2em; /* Réduit la taille du titre */
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+.itineraire h4 a {
+    text-decoration: none;
+    color: #333; /* Couleur du texte */
+}
+
+.itineraire h4 a:hover {
+    color: #0077cc; /* Changement de couleur au survol */
+}
+
+
+
+.route {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.7); /* Blanc légèrement transparent */
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-style: italic;
+}
+
+
+.intro {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto; /* Centre l'image horizontalement */
+}
+
+dl {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+dd {
+    font-size: 1.1em;
+    background: #f4f4f4;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    background: rgba(250, 250, 250, 0.3);
+}
+
+dd::before {
+    content: "✔️";
+    color: green;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.liste {
+    display: flex;
+    justify-content: center; /* Centre la liste dans la page */
+}
+
+.liste img{
+     max-width: 40%;
+     height: auto;
+     display: block;
+     margin: auto; /* Centre l'image horizontalement */
+}
+.liste ul {
+    text-align: left; /* Aligne le texte à gauche */
+    width: 60%; /* Ajuste la largeur pour un bon rendu */
+    max-width: 800px; /* Empêche la liste d'être trop large */
+    padding: 0;
+}
+
+.liste ul li {
+    list-style-position: inside; /* Permet aux puces d'être alignées avec le texte */
+    padding: 5px 0; /* Espacement entre les éléments */
+}
+
+.cuisine-container {
+    display: flex;            /* Utilise Flexbox pour aligner les éléments horizontalement */
+    flex-wrap: wrap;          /* Permet aux éléments de se répartir sur plusieurs lignes si nécessaire */
+    justify-content: center;  /* Centre les éléments horizontalement */
+    gap: 20px;                /* Espace entre les recettes */
+    margin-top: 20px;         /* Ajoute de l'espace en haut */
+}
+
+.cuisine{
+    display: flex;
+    flex-direction: column;   /* Les images et le texte sont empilés verticalement */
+    align-items: center;      /* Centre le contenu horizontalement dans chaque recette */
+    text-align: center;       /* Centre le texte */
+    max-width: 250px;         /* Largeur maximale de chaque recette */
+    width: 100%;              /* La largeur s'ajuste automatiquement */
+}
+
+.cuisine img {
+    width: 100%; /* Rendre l'image responsive */
+    max-width: 200px; /* Limite la taille */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+}
+
+
+
+h1, h2, h3 {
+    text-align: left;
+    width: 80%; /* Même largeur que les paragraphes */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Afficher la nav et masquer le menu-toggle sur grand écran */
+@media screen and (min-width: 768px) {
+    .menu-toggle {
+        display: none; /* Cache le bouton menu sur PC */
+    }
+    .menu {
+        display: flex !important; /* Affiche la navigation */
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        background: none;
+        width: auto;
+    }
+    .menu a {
+        padding: 10px 20px;
+    }
+}
+
+/* Afficher le bouton et cacher la nav sur mobile */
+@media screen and (max-width: 767px) {
+    .menu {
+        display: none; /* Caché par défaut */
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Affiche le bouton uniquement sur mobile */
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .menu.show {
+        display: flex; /* Affiche le menu quand activé */
+    }
+}
+
