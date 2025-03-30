@@ -1,0 +1,634 @@
+body{
+    margin: 0;
+    font-family: 'Book Antiqua', serif;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.menu {
+    transition: all 0.3s ease-in-out;
+}
+
+.section {
+    width: 100%;  /* Prend toute la largeur */
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre verticalement si nécessaire */
+    padding: 10px 0; /* Espace en haut et en bas */
+    background: rgba(0, 0, 0, 0.03); /* Légère couleur de fond */
+}
+
+/* Style spécifique pour l'iframe */
+.section iframe {
+    width: 100%;
+    height: 50vh; /* Prend toute la hauteur de l'écran */
+    border: none;
+    display: block;
+}
+
+.couverture h1 {
+    position: relative;
+    top: -70px;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.3); /* Réduire l'opacité pour voir l'image de couverture */
+    margin: 0 auto;
+    padding: 10px 20px; /* Ajuster le padding pour que le fond ne soit pas trop grand */
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+    font-size: 2rem;
+}
+
+.couverture {
+    width: 100%;
+    height:  100vh; /* Demi-hauteur de l'écran */
+    background: url('camping-car.jpg') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+nav {
+      position: absolute;
+      top: 45%;
+      left: 10px;
+      transform: translateY(-50%);
+      z-index: 1000;
+  }
+  .menu-toggle {
+    background: rgba(64, 64, 64, 0.8); /* Gris plus foncé */
+    border: none;
+    font-size: 1.5rem; /* Taille plus petite */
+    cursor: pointer;
+    padding: 8px 12px; /* Moins de padding pour un bouton plus petit */
+    border-radius: 5px;
+    color: white;
+}
+  .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+      position: absolute;
+      background: rgba(128, 128, 128, 0.7);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 200px;
+      top: 40px;
+      left: 0;
+      border-radius: 5px;
+  }
+  .menu.show {
+      display: block;
+  }
+  .menu li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+  }
+  .menu li a {
+      text-decoration: none;
+      color: white;
+      display: block;
+  }
+  .menu li:hover {
+      background: rgba(100, 100, 100, 0.7);
+  }
+  
+p {
+   text-align: left;  /* Aligne le texte à gauche */
+   margin-top: 5px;   /* Réduit l'espace au-dessus */
+   margin-bottom: 5px;  /* Réduit l'espace en dessous */
+   width: 80%;  /* Définit la largeur de l'élément */
+   margin-left: auto;   /* Centre horizontalement */
+   margin-right: auto;  /* Centre horizontalement */
+   
+}
+
+/* Container pour l'image et le texte */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacement entre les éléments */
+    margin: 0 auto; /* Centrer le container */
+    max-width: 1200px; /* Largeur maximale du container */
+}
+
+.texte-paragraphe {
+    max-width: 100%; /* Pour que le texte ne déborde pas de son conteneur */
+    padding: 15px; /* Espacement autour du texte */
+    margin: 0 auto; /* Centre le texte */
+    font-size: 1.6rem; /* Augmente la taille de la police */
+    line-height: 1.6; /* Espacement entre les lignes pour améliorer la lisibilité */
+}
+
+.texte-paragraphe p {
+    text-align: left; /* Alignement du texte à gauche */
+    width: 60%; /* Ajuste la largeur pour un bon rendu */
+    max-width: 800px; /* Empêche le texte d'être trop large */
+    margin: 0; /* Enlève les marges par défaut pour un meilleur contrôle */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    flex-wrap: wrap; /* Permet l'adaptation sur petits écrans */
+    gap: 15px; /* Espacement entre les images */
+    padding: 20px; /* Ajoute un peu d'espace autour */
+}
+
+.image img{
+    
+    width: 250px;  /* Largeur fixe */
+    height: 180px; /* Hauteur fixe */
+    object-fit: cover; /* Coupe l'image pour qu'elle remplisse bien la boîte */
+    border-radius: 10px; /* Arrondi les coins */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour un bel effet */
+}
+
+@media (max-width: 768px) {
+    .couverture {
+        min-height: 70vh; /* Plus grand pour les écrans plus petits */
+    }
+
+    .couverture h1 {
+        padding: 20px; /* Un peu plus de padding pour les mobiles */
+    }
+}
+
+.page{
+    margin-top: -8vh; /* Décalage équivalent à la hauteur de .couverture */
+    background: url('nuit-etoile.jpg') no-repeat center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    text-align: center; /* Centre aussi le texte */
+    width: 100%;
+    margin-top: 15vh;
+}
+
+.presentation h1 {
+    font-size: 2.5rem;
+    color: white; /* Texte en blanc */
+    text-align: center; /* Centre le texte */
+}
+
+.description-container {
+    display: flex;
+    align-items: center; /* Aligne verticalement le texte et l'image */
+    justify-content: center; /* Centre le contenu */
+    gap: 20px; /* Espace entre l'image et le texte */
+    flex-wrap: wrap; /* Permet d'adapter la disposition sur mobile */
+    padding: 20px;
+    width: 100%;
+}
+
+.description img {
+    width: 40%; /* Taille de l'image sur grand écran */
+    max-width: 300px; /* Empêche l'image de devenir trop grande */
+    height: auto;
+    border-radius: 10px; /* Coins arrondis pour un effet esthétique */
+}
+
+.description p {
+    width: 50%; /* Ajuste la largeur pour un bon rendu */
+    max-width: 600px;
+    text-align: left;
+    color: white; /* Texte en blanc */
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+
+.fond{
+   background: linear-gradient(to bottom, #6ab7e6, #fdf6d8);
+}
+
+.couleur{
+    background: linear-gradient(135deg, #D2B48C, #8B7355, #D2B48C, #8B7355);
+}
+
+.couleur2 {
+   background: linear-gradient(135deg, #1E90FF, #40E0D0);
+}
+ 
+.couleur3 {
+  background: linear-gradient(45deg, #00AEEF, #40E0D0, #A0DAB4);
+}   
+
+.couleur4 {
+   background: linear-gradient(45deg, #B0B0B0, #D4C8A8, #87CEEB);
+}   
+
+.couleur5{
+   background: linear-gradient(45deg, #E53935, #D84315, #8D6E63);
+}
+
+.couleur6 {
+   background: linear-gradient(45deg, #FF7F50, #FF6347, #FF4500);
+}
+
+.couleur7 {
+   background: linear-gradient(45deg, #8A2BE2, #7B68EE, #6A5ACD);
+}
+
+.couleur8 {
+   background: linear-gradient(45deg, #C85A17, #E7B44B, #9A4D1A);
+}
+
+.couleur9 {
+   background: linear-gradient(45deg, #B58B50, #D4A15C, #8C5A2F);
+}
+
+.couleur10 {
+   background: linear-gradient(45deg, #2C3E50, #A3C9D9, #2E5545);
+}
+
+.itineraire-container {
+    display: grid; /* Utilise grid pour disposer les images côte à côte */
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales pour les images */
+    gap: 20px; /* Espace entre les images */
+}
+
+.itineraire {
+    display: flex;
+    flex-direction: column; /* Empile l'image et le titre */
+    align-items: center; /* Centre horizontalement */
+    text-align: center; /* Centre le texte */
+    gap: 10px; /* Espacement entre l'image et le texte */
+    margin: 20px auto; /* Centre le bloc dans la page */
+    max-width: 250px; /* Ajuste la largeur du bloc */
+}
+
+.itineraire img {
+    width: 100%; /* Les images prennent toute la largeur de leur colonne */
+    height: auto; /* Ajuste la hauteur proportionnellement */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+}
+
+.itineraire h1 {
+    font-size: 1.2em; /* Réduit la taille du titre */
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+.itineraire h1 a {
+    text-decoration: none;
+    color: #333; /* Couleur du texte */
+}
+
+.itineraire h1 a:hover {
+    color: #0077cc; /* Changement de couleur au survol */
+}
+
+.itineraire h2 {
+    font-size: 1.2em; /* Réduit la taille du titre */
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.itineraire h2 a {
+    text-decoration: none;
+    color: #333; /* Couleur du texte */
+}
+
+.itineraire h2 a:hover {
+    color: #0077cc; /* Changement de couleur au survol */
+}
+
+.itineraire h3 {
+    font-size: 1.2em; /* Réduit la taille du titre */
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.itineraire h3 a {
+    text-decoration: none;
+    color: #333; /* Couleur du texte */
+}
+
+.itineraire h3 a:hover {
+    color: #0077cc; /* Changement de couleur au survol */
+}
+
+.itineraire h4 {
+    font-size: 1.2em; /* Réduit la taille du titre */
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+.itineraire h4 a {
+    text-decoration: none;
+    color: #333; /* Couleur du texte */
+}
+
+.itineraire h4 a:hover {
+    color: #0077cc; /* Changement de couleur au survol */
+}
+
+
+
+.route {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.7); /* Blanc légèrement transparent */
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-style: italic;
+}
+
+
+.intro {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto; /* Centre l'image horizontalement */
+}
+
+dl {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+dd {
+    font-size: 1.1em;
+    background: #f4f4f4;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    background: rgba(250, 250, 250, 0.3);
+}
+
+dd::before {
+    content: "✔️";
+    color: green;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.liste {
+    margin-bottom: 20px; /* Espace entre les listes */
+    padding: 0 15px; /* Ajoute un peu d'espace à gauche et à droite des listes */
+}
+
+.liste img{
+    width: 100%; /* Les images prennent 100% de la largeur du conteneur */
+    max-width: 100%; /* S'assure qu'elles ne débordent pas du conteneur */
+    height: auto; /* Ajuste la hauteur proportionnellement */
+    display: block; /* Permet de retirer l'espace en dessous de l'image */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour l'effet esthétique */
+}
+.liste ul {
+    list-style-type: disc; /* Style des puces */
+    margin: 0; /* Annule les marges par défaut */
+    padding-left: 20px; /* Décale légèrement la liste à droite */
+}
+
+.liste ul li {
+    list-style-position: inside; /* Permet aux puces d'être alignées avec le texte */
+    padding: 5px 0; /* Espacement entre les éléments */
+}
+
+.cuisine-container {
+    display: flex;            /* Utilise Flexbox pour aligner les éléments horizontalement */
+    flex-wrap: wrap;          /* Permet aux éléments de se répartir sur plusieurs lignes si nécessaire */
+    justify-content: center;  /* Centre les éléments horizontalement */
+    gap: 20px;                /* Espace entre les recettes */
+    margin-top: 20px;         /* Ajoute de l'espace en haut */
+}
+
+.cuisine{
+     display: flex;
+    flex-direction: column;   /* Les images et le texte sont empilés verticalement */
+    align-items: center;      /* Centre le contenu horizontalement dans chaque recette */
+    text-align: center;       /* Centre le texte */
+    max-width: 250px;         /* Largeur maximale de chaque recette */
+    width: 100%;              /* La largeur s'ajuste automatiquement */
+}
+
+.cuisine img {
+    width: 100%; /* Rendre l'image responsive */
+    max-width: 200px; /* Limite la taille */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+}
+
+
+
+h1, h2, h3 {
+    text-align: left;
+    width: 80%; /* Même largeur que les paragraphes */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;  /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+    gap: 10px;        /* Espacement entre les images */
+    justify-content: center; /* Centre les images horizontalement */
+}
+
+.image-container img {
+    width: 250px;      /* Largeur fixe pour toutes les images */
+    height: 180px;     /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Coupe les images pour les adapter à la taille sans déformation */
+    border-radius: 15px;  /* Coins arrondis sur les images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée sur les images */
+}
+
+@media (min-width: 769px) {
+    .image-container img {
+        width: 250px;  /* Fixe la largeur sur PC */
+        height: 180px; /* Fixe la hauteur sur PC */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: row;   /* Affiche les images sur une seule ligne */
+        justify-content: space-between; /* Espace entre les images */
+    }
+
+    .image-container img {
+        width: 48%;  /* Largeur de 48% pour que 2 images tiennent sur la même ligne */
+        height: 180px; /* Fixe la hauteur sur mobile */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .texte-paragraphe, .image-container {
+        flex: 1 1 100%; /* Sur les petits écrans, chaque élément prend 100% de l'espace */
+    }
+}
+
+/* Responsive design : sur petits écrans, on passe à 100% */
+@media screen and (max-width: 768px) {
+    .texte-paragraphe {
+        flex-direction: column; /* Colonne sur petits écrans pour ne pas entasser les éléments */
+        align-items: center; /* Centre les éléments dans la colonne */
+        padding: 10px 20px; /* Ajouter un peu de marge sur les côtés pour les petits écrans */
+    }
+
+    .texte-paragraphe p {
+        width: 100%; /* Sur mobile, le paragraphe occupe toute la largeur */
+        max-width: none; /* On supprime la limite de largeur maximale pour mieux s'adapter à l'écran */
+    }
+    
+
+/* 📱 Ajustement pour mobile */
+@media screen and (max-width: 768px) {
+    .presentation {
+        margin-top: 10vh; /* Ajustement pour un bon centrage */
+    }
+    
+    .presentation h1 {
+        font-size: 2rem; /* Réduction de la taille sur mobile */
+    }
+}
+
+/* 📱 Ajustement pour mobile */
+@media screen and (max-width: 768px) {
+    .description-container {
+        flex-direction: column; /* Affiche en colonne sur mobile */
+        text-align: center;
+    }
+
+    .description img {
+        width: 80%; /* Agrandir un peu l'image sur mobile */
+        max-width: 250px;
+    }
+
+    .description p {
+        width: 90%; /* Le texte prend plus d'espace sur mobile */
+        font-size: 1rem;
+        text-align: left; /* Toujours aligné à gauche */
+    }
+}
+
+@media (max-width: 768px) {
+    .couverture h1 {
+        padding: 10px 20px; /* Réduire un peu le padding pour les mobiles */
+        font-size: 1.8rem;
+        width: 80%;
+    }
+    
+    .couverture {
+        height: 100vh; 
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .itineraire {
+        padding: 10px; /* Ajoutez une marge intérieure pour éviter que le contenu ne touche les bords sur les petits écrans */
+    }
+
+    .itineraire img {
+        width: 100%;  /* L'image prend toute la largeur disponible */
+        height: auto; /* Ajuste la hauteur automatiquement pour maintenir les proportions */
+    }
+
+    .itineraire h1, .itineraire h2, .itineraire h3, .itineraire h4 {
+        font-size: 1em; /* Réduit la taille des titres pour les petits écrans */
+    }
+}
+
+@media (max-width: 768px) {
+    .texte-paragraphe {
+        font-size: 0.9rem; /* Réduit légèrement la taille du texte sur les petits écrans */
+        padding: 10px; /* Réduit le padding */
+    }
+
+    .liste {
+        padding: 0 10px; /* Réduit les espacements des listes */
+    }
+
+    .liste img {
+        width: 100%; /* Les images prennent toute la largeur de l'écran */
+        height: auto; /* Conserve le ratio de l'image */
+    }
+
+    .menu {
+        font-size: 1rem; /* Adapte la taille des éléments du menu pour petits écrans */
+    }
+}
+
+/* Adaptation pour les écrans mobiles (moins de 768px) */
+@media (max-width: 768px) {
+    .cuisine-container {
+        display: grid; /* Utilisation du grid pour placer deux éléments côte à côte */
+        grid-template-columns: repeat(2, 1fr); /* Définit deux colonnes égales */
+        gap: 20px; /* Espacement entre les recettes */
+    }
+
+    .cuisine {
+        width: 100%; /* Assure que chaque élément prend la largeur disponible */
+        align-items: center; /* Aligne les éléments au centre de chaque colonne */
+    }
+
+    .cuisine img {
+        max-width: 100%; /* Les images occupent toute la largeur de leur conteneur */
+        margin-bottom: 10px; /* Ajoute un petit espace sous les images pour le texte */
+    }
+}
